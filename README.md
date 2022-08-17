@@ -65,21 +65,32 @@ npm start
 > password: String  
 > }
 
+##### Response
+###### Success
+HTTP **200** status code.
+> Body: {  
+> success: Boolean
+> message: String
+> }
+###### Failure
+This returns a failure message and an HTTP **401** code.
+> Body: {  
+> message: String  
+> }
+
 #### `POST /api/login`
 ##### Request
 > Body: {  
 > phone_number: String  
 > password: String  
 > }
-
-#### `GET /api/user/profile`
 ##### Response
 ###### Success
 HTTP **200** status code.
 > Body: {  
 > success: Boolean
 > message: String  
-> result : Object
+> token : String
 > }
 ###### Failure
 This returns a failure message and an HTTP **401** code.
@@ -92,21 +103,6 @@ This returns a failure message and an HTTP **401** code.
 > Body: {  
 > pin: String  
 > confirm_pin: String  
-> }
-
-#### `GET /api/account/info`
-##### Response
-###### Success
-HTTP **200** status code.
-> Body: {  
-> success: Boolean
-> message: String  
-> result : Object
-> }
-###### Failure
-This returns a failure message and an HTTP **401** code.
-> Body: {  
-> message: String  
 > }
 
 #### `POST /api/account/fund`
@@ -130,7 +126,37 @@ This returns a failure message and an HTTP **401** code.
 > account_pin: String  
 > }
 
-#### `POST /api/payments`
+#### `GET /api/user/profile`
+##### Response
+###### Success
+HTTP **200** status code.
+> Body: {  
+> success: Boolean
+> message: String  
+> result : Object
+> }
+###### Failure
+This returns a failure message and an HTTP **401** code.
+> Body: {  
+> message: String  
+> }
+
+#### `GET /api/account/info`
+##### Response
+###### Success
+HTTP **200** status code.
+> Body: {  
+> success: Boolean
+> message: String  
+> result : Object
+> }
+###### Failure
+This returns a failure message and an HTTP **401** code.
+> Body: {  
+> message: String  
+> }
+
+#### `GET /api/payments`
 ##### Response
 ###### Success
 HTTP **200** status code.
@@ -147,7 +173,7 @@ This returns a failure message and an HTTP **401** code.
 > }
 
 
-#### `POST /api/transactions`
+#### `GET /api/transactions`
 ##### Response
 ###### Success
 HTTP **200** status code.
