@@ -4,6 +4,13 @@
 Francis' LendSqr Screening Test Submission -- Financial Technology Platform that supports financial services and manages transactions of a user. Built with NodeJs, KnexJs & MySQL Database
 * * *
 
+### Built With
+
+* [![Node][Node.s]][Node-url]
+* [![Express][Expressjs.com]][Express-url]
+* [![Knex][Knexjs.ord]][Knex-url]
+* [![MySql][MySql.com]][MySql-url]
+
 ## Links
 
 - Github Repo Link : https://github.com/soundx-code/lendsqr-nodejs-task
@@ -99,5 +106,34 @@ npm start
 > }
 
 #### `POST /api/payments`
+##### Return
+###### Success
+HTTP **200** status code.
+> Body: {  
+> success: Boolean
+> message: String  
+> result : Object
+> }
+*Note: result contains array objects of payments with pagination*
+###### Failure
+This returns a failure message and an HTTP **401** code.
+> Body: {  
+> message: String  
+> }
+
 
 #### `POST /api/transactions`
+##### Response
+###### Success
+HTTP **200** status code.
+> Body: {  
+> success: Boolean
+> message: String  
+> result : Object
+> }
+*Note: result contains array objects of transactions with pagination*
+###### Failure
+This returns a failure message and an HTTP **401** code.
+> Body: {  
+> message: String  
+> }
