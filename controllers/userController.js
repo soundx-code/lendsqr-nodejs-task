@@ -51,9 +51,7 @@ const login = async (req, res) => {
       phone_number: user.phone_number,
     };
 
-    const token = jwt.sign(payload, jwt_config.key, {
-      expiresIn: "2h",
-    });
+    const token = jwt.sign(payload, jwt_config.key);
 
     return res.status(200).send({
       success: true,
