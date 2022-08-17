@@ -1,6 +1,6 @@
 # Francis' LendSqr Nodejs Screening Test
 ***
-## Description?
+## Description
 Francis' LendSqr Screening Test Submission -- Financial Technology Platform that supports financial services and manages transactions of a user. Built with NodeJs, KnexJs & MySQL Database
 * * *
 
@@ -48,16 +48,174 @@ npm start
 ```
 
 ## API Documentation
-### Authentication
-**Once the following route has been called and the JSON Web Token (JWT) has been stored in some way, all *protected* routes shall 
-be called having requests' `x-access-token` *header* being set to the encoded JWT.**  
-#### `POST /login`
+### Authentication 
+#### `POST /api/register`
 ##### Request
 > Body: {  
 > phone_number: String  
 > password: String  
 > }
-##### Return
+##### Response
+###### Success
+This request returns a ***signed*** JWT that shall be stored on the client-side (e.g., local storage or a cookie) and an HTTP **200** code.
+> Body: {  
+> message: String
+> token: String  
+> }
+*Note: token is the JSON Web Token*
+###### Failure
+This returns a failure message and an HTTP **400** code.
+> Body: {  
+> message: String  
+> }
+
+#### `POST /api/login`
+##### Request
+> Body: {  
+> phone_number: String  
+> password: String  
+> }
+##### Response
+###### Success
+This request returns a ***signed*** JWT that shall be stored on the client-side (e.g., local storage or a cookie) and an HTTP **200** code.
+> Body: {  
+> message: String
+> token: String  
+> }
+*Note: token is the JSON Web Token*
+###### Failure
+This returns a failure message and an HTTP **400** code.
+> Body: {  
+> message: String  
+> }
+
+#### `POST /api/user/profile`
+##### Request
+> Body: {  
+> phone_number: String  
+> password: String  
+> }
+##### Response
+###### Success
+This request returns a ***signed*** JWT that shall be stored on the client-side (e.g., local storage or a cookie) and an HTTP **200** code.
+> Body: {  
+> message: String
+> token: String  
+> }
+*Note: token is the JSON Web Token*
+###### Failure
+This returns a failure message and an HTTP **400** code.
+> Body: {  
+> message: String  
+> }
+
+#### `POST /api/account/set-pin`
+##### Request
+> Body: {  
+> phone_number: String  
+> password: String  
+> }
+##### Response
+###### Success
+This request returns a ***signed*** JWT that shall be stored on the client-side (e.g., local storage or a cookie) and an HTTP **200** code.
+> Body: {  
+> message: String
+> token: String  
+> }
+*Note: token is the JSON Web Token*
+###### Failure
+This returns a failure message and an HTTP **400** code.
+> Body: {  
+> message: String  
+> }
+
+#### `POST /api/account/info`
+##### Request
+> Body: {  
+> phone_number: String  
+> password: String  
+> }
+##### Response
+###### Success
+This request returns a ***signed*** JWT that shall be stored on the client-side (e.g., local storage or a cookie) and an HTTP **200** code.
+> Body: {  
+> message: String
+> token: String  
+> }
+*Note: token is the JSON Web Token*
+###### Failure
+This returns a failure message and an HTTP **400** code.
+> Body: {  
+> message: String  
+> }
+
+#### `POST /api/account/fund`
+##### Request
+> Body: {  
+> phone_number: String  
+> password: String  
+> }
+##### Response
+###### Success
+This request returns a ***signed*** JWT that shall be stored on the client-side (e.g., local storage or a cookie) and an HTTP **200** code.
+> Body: {  
+> message: String
+> token: String  
+> }
+*Note: token is the JSON Web Token*
+###### Failure
+This returns a failure message and an HTTP **400** code.
+> Body: {  
+> message: String  
+> }
+
+#### `POST /api/account/withdraw`
+##### Request
+> Body: {  
+> phone_number: String  
+> password: String  
+> }
+##### Response
+###### Success
+This request returns a ***signed*** JWT that shall be stored on the client-side (e.g., local storage or a cookie) and an HTTP **200** code.
+> Body: {  
+> message: String
+> token: String  
+> }
+*Note: token is the JSON Web Token*
+###### Failure
+This returns a failure message and an HTTP **400** code.
+> Body: {  
+> message: String  
+> }
+
+#### `POST /api/payments`
+##### Request
+> Body: {  
+> phone_number: String  
+> password: String  
+> }
+##### Response
+###### Success
+This request returns a ***signed*** JWT that shall be stored on the client-side (e.g., local storage or a cookie) and an HTTP **200** code.
+> Body: {  
+> message: String
+> token: String  
+> }
+*Note: token is the JSON Web Token*
+###### Failure
+This returns a failure message and an HTTP **400** code.
+> Body: {  
+> message: String  
+> }
+
+#### `POST /api/transactions`
+##### Request
+> Body: {  
+> phone_number: String  
+> password: String  
+> }
+##### Response
 ###### Success
 This request returns a ***signed*** JWT that shall be stored on the client-side (e.g., local storage or a cookie) and an HTTP **200** code.
 > Body: {  
