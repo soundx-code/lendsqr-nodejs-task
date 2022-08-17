@@ -19,6 +19,7 @@
     "knex": "^2.2.0",
     "knex-paginate": "^3.0.1",
     "mysql": "^2.18.1",
-    "randomstring": "^1.2.2"
+    "randomstring": "^1.2.2",
+    "supertest": "^6.2.4"
   }
 }

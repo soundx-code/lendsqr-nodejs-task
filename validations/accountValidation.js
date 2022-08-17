@@ -52,9 +52,6 @@ const withdrawFund = [
     .isEmpty()
     .isInt()
     .withMessage("amount must be a number"),
-    check("account_number", "Account Number is required")
-    .not()
-    .isEmpty(),
     check("account_pin", "Account pin is required")
     .not()
     .isEmpty()

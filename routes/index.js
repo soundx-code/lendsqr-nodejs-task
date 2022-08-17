@@ -11,7 +11,7 @@ router.use('/api', paymentRoute);
 router.use('/api', transactionRoute);
 
 router.get('/', (req, res) => {
-    return res.status(200).json({ message: 'Welcome to Francis\' NodeJs LendSqr Screening Test ' });
+    return res.status(200).json({ message: 'Welcome to Francis\' NodeJs LendSqr Screening Test Submission :)' });
 });
 
 module.exports = router;

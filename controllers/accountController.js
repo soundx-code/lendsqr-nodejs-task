@@ -112,11 +112,10 @@ const withdrawFund = async (req, res) => {
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
-    const { amount, account_number, account_pin } = req.body;
+    const { amount, account_pin } = req.body;
 
     const accountData = {
       amount,
-      account_number,
       account_pin,
       user: req.user,
     };
