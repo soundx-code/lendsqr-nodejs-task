@@ -6,10 +6,10 @@ Francis' LendSqr Screening Test Submission -- Financial Technology Platform that
 
 ### Built With
 
-* [![Node][Node.s]][Node-url]
-* [![Express][Expressjs.com]][Express-url]
-* [![Knex][Knexjs.ord]][Knex-url]
-* [![MySql][MySql.com]][MySql-url]
+* NodeJs
+* ExpressJs
+* KnexJs
+* MySql 
 
 ## Links
 
@@ -73,7 +73,19 @@ npm start
 > }
 
 #### `GET /api/user/profile`
-
+##### Response
+###### Success
+HTTP **200** status code.
+> Body: {  
+> success: Boolean
+> message: String  
+> result : Object
+> }
+###### Failure
+This returns a failure message and an HTTP **401** code.
+> Body: {  
+> message: String  
+> }
 
 #### `POST /api/account/set-pin`
 ##### Request
@@ -83,6 +95,19 @@ npm start
 > }
 
 #### `GET /api/account/info`
+##### Response
+###### Success
+HTTP **200** status code.
+> Body: {  
+> success: Boolean
+> message: String  
+> result : Object
+> }
+###### Failure
+This returns a failure message and an HTTP **401** code.
+> Body: {  
+> message: String  
+> }
 
 #### `POST /api/account/fund`
 ##### Request
@@ -106,7 +131,7 @@ npm start
 > }
 
 #### `POST /api/payments`
-##### Return
+##### Response
 ###### Success
 HTTP **200** status code.
 > Body: {  
