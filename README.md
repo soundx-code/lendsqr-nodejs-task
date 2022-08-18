@@ -53,10 +53,18 @@ knex migrate:latest
 npm start
 
 ```
+## Migrations
+
+* users
+* accounts
+* payments
+* transactions
 
 ## API Documentation
 ### Authentication 
 #### `POST /api/register`
+*Note: This endpoint creates registers a user and create a financial account for the user(comprising of his/her unique account number etc)*
+
 ##### Request
 > Body: {  
 > first_name: String  
@@ -73,7 +81,7 @@ HTTP **200** status code.
 > message: String
 > }
 ###### Failure
-This returns a failure message and an HTTP **401** code.
+This returns a failure message and an HTTP **400** code.
 > Body: {  
 > message: String  
 > }
@@ -93,7 +101,7 @@ HTTP **200** status code.
 > token : String
 > }
 ###### Failure
-This returns a failure message and an HTTP **401** code.
+This returns a failure message and an HTTP **400** code.
 > Body: {  
 > message: String  
 > }
@@ -136,7 +144,7 @@ HTTP **200** status code.
 > result : Object
 > }
 ###### Failure
-This returns a failure message and an HTTP **401** code.
+This returns a failure message and an HTTP **400** code.
 > Body: {  
 > message: String  
 > }
@@ -151,7 +159,7 @@ HTTP **200** status code.
 > result : Object
 > }
 ###### Failure
-This returns a failure message and an HTTP **401** code.
+This returns a failure message and an HTTP **400** code.
 > Body: {  
 > message: String  
 > }
@@ -167,7 +175,7 @@ HTTP **200** status code.
 > }
 *Note: result contains array objects of payments with pagination*
 ###### Failure
-This returns a failure message and an HTTP **401** code.
+This returns a failure message and an HTTP **400** code.
 > Body: {  
 > message: String  
 > }
@@ -184,7 +192,7 @@ HTTP **200** status code.
 > }
 *Note: result contains array objects of transactions with pagination*
 ###### Failure
-This returns a failure message and an HTTP **401** code.
+This returns a failure message and an HTTP **400** code.
 > Body: {  
 > message: String  
 > }
