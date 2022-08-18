@@ -63,7 +63,7 @@ npm start
 ## API Documentation
 ### Authentication 
 #### `POST /api/register`
-*Note: This endpoint creates registers a user and create a financial account for the user(comprising of his/her unique account number etc)*
+*Note: This endpoint registers a user and creates a financial account for the user(comprising of his/her unique account number etc)*
 
 ##### Request
 > Body: {  
@@ -100,6 +100,8 @@ HTTP **200** status code.
 > message: String  
 > token : String
 > }
+*Note: token is the JSON Web Token*
+
 ###### Failure
 This returns a failure message and an HTTP **400** code.
 > Body: {  
@@ -107,16 +109,30 @@ This returns a failure message and an HTTP **400** code.
 > }
 
 #### `POST /api/account/set-pin`
+*Note: User must set his/her account pin to carry out any transaction*
+
 ##### Request
 > Body: {  
 > pin: String  
 > confirm_pin: String  
 > }
 
+##### Response
+> Body: {  
+> success: Boolean
+> message: String  
+> }
+
 #### `POST /api/account/fund`
 ##### Request
 > Body: {  
 > amount: Number    
+> }
+
+##### Response
+> Body: {  
+> success: Boolean
+> message: String  
 > }
 
 #### `POST /api/account/transfer`
@@ -127,11 +143,23 @@ This returns a failure message and an HTTP **400** code.
 > sender_account_pin: String  
 > }
 
+##### Response
+> Body: {  
+> success: Boolean
+> message: String  
+> }
+
 #### `POST /api/account/withdraw`
 ##### Request
 > Body: {  
 > amount: String  
 > account_pin: String  
+> }
+
+##### Response
+> Body: {  
+> success: Boolean
+> message: String  
 > }
 
 #### `GET /api/user/profile`
