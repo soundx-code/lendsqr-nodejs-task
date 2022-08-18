@@ -4,7 +4,7 @@
   "description": "Francis' Lendsqr Nodejs Assessment",
   "main": "server.js",
   "scripts": {
-    "test": "jest"
+    "test": "cross-env NODE_ENV=test jest --testTimeout=10000"
   },
   "author": "Francis Nwabueze",
   "license": "ISC",
@@ -19,7 +19,17 @@
     "knex": "^2.2.0",
     "knex-paginate": "^3.0.1",
     "mysql": "^2.18.1",
-    "randomstring": "^1.2.2",
+    "randomstring": "^1.2.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^28.1.3",
     "supertest": "^6.2.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }
